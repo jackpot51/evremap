@@ -2,6 +2,8 @@
 
 set -ex
 
+cd "$(dirname "$0")"
+
 cargo build --release
 
 sudo cp "${HOSTNAME}.toml" /etc/evremap.toml
